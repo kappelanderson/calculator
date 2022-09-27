@@ -1,7 +1,7 @@
 
 // Operations
 let add  = (num1, num2) =>{
-    return num1 + num2
+    return Number(num1) + Number(num2)
 }
 
 let subtract  = (num1, num2) =>{
@@ -30,7 +30,7 @@ let operate = (operator, num1, num2) =>{
 let displayNum = ''
 
 let firstNum
-let result
+let secondNum
 
 let currentOperator
 
@@ -65,5 +65,6 @@ let equals = document.querySelector('.equal')
 
 equals.addEventListener('click', (e)=> {
     document.querySelector('.display').innerText = operate(currentOperator, firstNum, displayNum)
+    firstNum = displayNum
     
 } )
