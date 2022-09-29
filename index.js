@@ -53,10 +53,14 @@ numbers.forEach((number) => number.addEventListener('click', ()=> {
 let operators = document.querySelectorAll('.operat')
 
 operators.forEach((operator)=> operator.addEventListener('click', ()=>{
-    if(!firstNum){
+    if(!firstNum && !secondNum){
     firstNum = displayNum
     currentOperator = operator.value
     displayNum = ''}
+    else{
+        currentOperator = operator.value
+        displayNum = ''
+    }
 }))
 
 // Equals operator
@@ -64,7 +68,22 @@ operators.forEach((operator)=> operator.addEventListener('click', ()=>{
 let equals = document.querySelector('.equal')
 
 equals.addEventListener('click', (e)=> {
-    document.querySelector('.display').innerText = operate(currentOperator, firstNum, displayNum)
+    secondNum = displayNum
+    displayNum = operate(currentOperator, firstNum, secondNum)
+    document.querySelector('.display').innerText = displayNum
     firstNum = displayNum
+    secondNum = ''
     
 } )
+
+
+// Clear all button
+
+let clearAll = document.querySelector('.clear_all')
+
+clearAll.addEventListener('click', ()=> {
+    displayNum = ''
+    firstNum = ''
+    secondNum = ''
+    document.querySelector('.display').innerText = displayNum
+})
