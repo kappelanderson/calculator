@@ -8,22 +8,24 @@
 }
 .container{
     width: 400px;
-    background-color: rgb(229, 229, 229);
+    background-color: rgb(1, 30, 44);
     text-align: center;
     padding: 20px 10px;
-    border: 2px solid rgb(67, 67, 67) ;
+    border: 2px solid rgb(92, 155, 255) ;
+    border-radius: 7px;
 }
 .display{
     height: 100px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(1, 31, 46);
     padding: 20px;
     font-size: 40px;
     display: flex;
     flex-direction: row;
     justify-content: end;
-    border: 2px solid rgb(67, 67, 67) ;
+    border: 2px solid rgb(92, 155, 255) ;
     border-radius: 7px;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    color: white;
+
 
 
 
@@ -43,8 +45,21 @@
     width: 75px;
     height: 75px;
     font-size: 30px;
-    border: 2px solid rgb(67, 67, 67) ;
-    background-color: white;
+    border: 2px solid rgb(92, 155, 255) ;
+    background-color: rgb(1, 31, 46);
     border-radius: 7px;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    color: white;
+
+}
+.btn:hover{
+        cursor: pointer;
+    box-shadow: 2px 2px 2px 1px rgba(255, 255, 255, 0.2);
+
+}
+body{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 21, 31);
 }
